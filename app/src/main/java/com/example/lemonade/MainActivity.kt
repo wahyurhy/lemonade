@@ -73,7 +73,6 @@ class MainActivity : AppCompatActivity() {
         lemonImage!!.setOnLongClickListener {
             // TODO: replace 'false' with a call to the function that shows the squeeze count
             showSnackbar()
-            true
         }
     }
 
@@ -104,7 +103,6 @@ class MainActivity : AppCompatActivity() {
             SQUEEZE -> {
                 squeezeCount++
                 lemonSize--
-                Log.d("MainActivity", "lemonSize: $lemonSize")
                 lemonadeState = if (lemonSize == 0) {
                     DRINK
                 } else SQUEEZE
